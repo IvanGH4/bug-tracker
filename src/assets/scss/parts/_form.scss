@@ -1,0 +1,117 @@
+.form-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    h2 {
+        margin: 20px 0px;
+        @extend .text-white;
+    }
+    form {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgba(46,54,68,0.03);
+        background: rgba(255, 255, 255,0.3);
+        backdrop-filter: blur(40px);
+        border: solid 2px transparent;
+        background-clip: padding-box;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 30px 0px;
+        label {
+            @extend .text-white;
+        }
+        input, textarea {
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            @extend .text-white;
+            &::placeholder {
+                color: #eee;
+            }
+        }
+        textarea {
+            resize: none;
+        }
+    }
+}
+
+.image {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    z-index: -2;
+    img {
+        width: 600px;
+    }
+}
+
+.logoutBtn {
+    margin-top: 20px;
+}
+
+.link-to-bugs {
+    @extend .text-dark;
+    text-decoration: none;
+    position: relative;
+    @extend .bg-secondary;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    .bugsQuantity {
+        position: absolute;
+        top: -5px;
+        left: -10px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        @extend .bg-red;
+        @extend .text-white;
+    }
+}
+
+.show-data {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255,0.5);
+    @extend .bg-white;
+    margin-bottom: 10px;
+    i {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    hr {
+        margin: 10px 0px;
+    }
+}
+
+@media(max-width: 800px) {
+    .form-container {
+        padding: 20px;
+        form {
+            width: 100%;
+        }
+    }
+    .show-data {
+        width: 100%;
+    }
+}

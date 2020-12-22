@@ -1,0 +1,97 @@
+$colors: (primary: #166fe5, dark: #333, light: #ffeeca, secondary: #c2a875, white: #fff, red: red, warning: yellow);
+
+@each $key, $color in $colors {
+    .text-#{$key} {color: $color;}
+}
+
+@each $key, $color in $colors {
+    .bg-#{$key} {background-color: $color;}
+}
+
+.register-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    @extend .bg-primary;
+    h2 {
+        font-size: 30px;
+        @extend .text-white;
+        letter-spacing: 2px;
+    }
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-wrapper {
+    position: relative;
+    width: 40%;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    @extend .bg-dark;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.4);
+    input {
+        padding: 5px 10px;
+        border: none;
+        border-bottom: solid 1px #fff;
+        background-color: transparent;
+        margin-bottom: 10px;
+        color: #fff;
+        &::placeholder {
+            color: #eee;
+        }
+    }
+    label {
+        @extend .text-white;
+        margin-bottom: 5px;
+    }
+    i {
+        font-size: 120px;
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        opacity: .3;
+        z-index: 1;
+        @extend .text-light;
+    }
+    a {
+        @extend .text-primary;
+        text-align: center;
+        margin-top: 10px;
+    }
+    small {
+        color: red;
+    }
+}
+
+.register-img {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 500px;
+} 
+
+@media(max-width: 800px) {
+    .register-wrapper {
+        width: 100%;
+    }
+    .register-container {
+        justify-content: center;
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+    .register-img {
+       width: 200px;
+    }
+}

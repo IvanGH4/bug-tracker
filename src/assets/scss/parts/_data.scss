@@ -1,0 +1,36 @@
+.data-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    @extend .bg-primary;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0px;
+}
+
+.link-box {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.generic-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    h2 {
+        margin: 20px 0px;
+        @extend .text-white;
+    }
+    .logout-icon {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 26px;
+        cursor: pointer;
+        z-index: 2;
+    }
+}

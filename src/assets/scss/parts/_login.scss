@@ -1,0 +1,81 @@
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @extend .bg-primary;
+    overflow: hidden;
+    h1 {
+        margin-top: 20px;
+    }
+    h2 {
+        margin: 20px 0px;
+        @extend .text-white;
+    }
+    form {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.4);
+        @extend .bg-dark;
+        position: relative;
+        z-index: 100;
+        i {
+            font-size: 80px;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            opacity: .3;
+            z-index: 1;
+            @extend .text-light;
+        }
+        input {
+            padding: 5px 10px;
+            border: none;
+            border-bottom: solid 1px #fff;
+            @extend .bg-dark;
+            @extend .text-white;
+            &::placeholder {
+                color: #eee;
+            }
+        }
+        label {
+            margin-top: 10px;
+            @extend .text-white;
+        }
+    }
+    a {
+        @extend .text-white;
+        margin-top: 10px;
+    }
+}
+
+.btn-login {
+    margin-top: 10px;
+    @extend .bg-primary;
+}
+
+.login-img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 500px;
+}
+
+@media(max-width: 800px) {
+    .login-container {
+        padding: 10px;
+        form {
+            width: 100%;
+        }
+    }
+    .login-img {
+        width: 200px;
+    }
+}
